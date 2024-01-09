@@ -1,228 +1,164 @@
 <div class="page-header">
   <div class="page-title">
-    <h4>Product List</h4>
-    <h6>Manage your products</h6>
+    <h4>Manage Company</h4>
+    <h6><a>Home </a> <i class="fa-solid fa-chevron-right"></i> Company</h6>
   </div>
   <div class="page-btn">
     <a [routerLink]="routes.addProduct" class="btn btn-added"
-      ><img src="assets/img/icons/plus.svg" alt="img" class="me-1" />Add New
-      Product</a
+      ><img src="assets/img/icons/plus.svg" alt="img" /></a
     >
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
 
-<!-- /product list -->
-<div class="card">
-  <div class="card-body">
-    <div class="table-top">
-      <div class="search-set">
-        <div class="search-path">
-          <a
-            class="btn btn-filter"
-            (click)="showFilter = !showFilter"
-            [class.setclose]="showFilter === true"
-            id="filter_search"
-          >
-            <img
-              *ngIf="showFilter === false"
-              src="assets/img/icons/filter.svg"
-              alt="img"
-            />
-            <span
-              ><img
-                *ngIf="showFilter === true"
-                src="assets/img/icons/closes.svg"
-                alt="img"
-            /></span>
-          </a>
-        </div>
-        <div class="search-input">
-          <a class="btn btn-searchset"
-            ><img src="assets/img/icons/search-white.svg" alt="img"
-          /></a>
-          <div class="dataTables_filter">
-            <label>
-              <input
-                [(ngModel)]="searchDataValue"
-                (ngModelChange)="searchData(searchDataValue)"
-                type="search"
-                class="form-control"
-                placeholder="Search..."
-              />
-            </label>
+      <div class="card text-white text-center">
+        <div class="card-header border-0 pb-0">
+          <div class="d-flex align-items-center">
+            <div class="d-grid">
+              <div class="badge org p-2 px-3 rounded">Free Plan</div>
+            </div>
+          </div>
+          <div class="card-header-right">
+            <div class="btn-group card-option">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="feather icon-more-vertical"></i>
+              </button>
+      
+              <div class="dropdown-menu dropdown-menu-end">
+                <a
+                  href="#"
+                  class="dropdown-item"
+                  data-url="https://demo.rajodiya.com/leadgo-saas/users/edit/2"
+                  data-ajax-popup="true"
+                  data-size="lg"
+                  data-title="Edit User"
+                  ><i class="ti ti-pencil mx-1"></i>Edit</a
+                >
+                <form
+                  method="POST"
+                  action="https://demo.rajodiya.com/leadgo-saas/users/2"
+                  accept-charset="UTF-8"
+                  id="delete-form-2"
+                >
+                  <input name="_method" type="hidden" value="DELETE" /><input
+                    name="_token"
+                    type="hidden"
+                    value="ed7fGFeUapZ8etDIw4pKC6ckcitkWoSJb4wb8tA2"
+                  />
+                  <a href="#!" class="dropdown-item show_confirm">
+                    <i class="ti ti-archive"></i><span class="ms-1"> Delete </span>
+                  </a>
+                </form>
+      
+                <a
+                  href="#"
+                  class="dropdown-item"
+                  data-url="https://demo.rajodiya.com/leadgo-saas/user-reset-password/eyJpdiI6ImpacDF4NE1FS3NiOUJqbDF5OEQ3VFE9PSIsInZhbHVlIjoiUTJaeDdGclMyLzNjTXR4NWVuQTBpUT09IiwibWFjIjoiMWEyZDViN2YxMDU0ZGU5M2QyZGFkZDIxM2M3NjViNWQxNWY5OGMwMGZkYTZhOTQwMWU3MGJjNzI1ZTUyYzdjOCIsInRhZyI6IiJ9"
+                  data-ajax-popup="true"
+                  data-size="md"
+                  data-title="Reset Password"
+                  data-toggle="tooltip"
+                  data-original-title="Reset Password"
+                  ><i class="ti ti-key"></i>
+                  <span>Reset Password</span>
+                </a>
+      
+                <a
+                  href="#"
+                  class="dropdown-item"
+                  data-size="lg"
+                  data-url="https://demo.rajodiya.com/leadgo-saas/user/2/plan"
+                  data-ajax-popup="true"
+                  data-title="Upgrade Plan"
+                  data-toggle="tooltip"
+                  data-original-title="Upgrade Plan"
+                  ><i class="ti ti-award"></i>
+                  Upgrade Plan
+                </a>
+                <a
+                  href="https://demo.rajodiya.com/leadgo-saas/home/2/login-with-admin"
+                  class="dropdown-item"
+                  data-ajax-popup="true"
+                  data-size="md"
+                  data-title="Login As Company"
+                  data-toggle="tooltip"
+                  data-original-title="Login As Company"
+                  ><i class="ti ti-replace py-1"></i>
+                  <span>Login As Company</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="wordset">
-        <ul>
-          <li>
-            <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"
-              ><img src="assets/img/icons/pdf.svg" alt="img"
-            /></a>
-          </li>
-          <li>
-            <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"
-              ><img src="assets/img/icons/excel.svg" alt="img"
-            /></a>
-          </li>
-          <li>
-            <a
-              data-bs-toggle="tooltip"
-              target="_blank"
-              data-bs-placement="top"
-              title="print"
-              ><img src="assets/img/icons/printer.svg" alt="img"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- /Filter -->
-    <div
-      class="card mb-0 border-0"
-      [ngClass]="{
-        'show-sub-menu': showFilter === true,
-        'hide-sub-menu': showFilter === false
-      }"
-    >
-      <div class="card-body p-0">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12">
-            <div class="row">
-              <div class="col-lg col-sm-6 col-12">
-                <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue2" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Unit">
-                    <mat-option *ngFor="let data of selectedList2" [value]="data.value">
-                    {{data.value}}
-                    </mat-option>
-                </mat-select>
-                </div>
+      
+        <div class="card-body">
+          <a
+            href="https://demo.rajodiya.com/leadgo-saas/storage/uploads/avatar/user-4.jpg"
+            target="_blank"
+          >
+            <img
+              src="https://demo.rajodiya.com/leadgo-saas/storage/uploads/avatar/user-4.jpg"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </a>
+          <h4 class="mt-2">
+            <a href="https://demo.rajodiya.com/leadgo-saas/users/2dit"
+              >Rajodiya Infotech</a
+            >
+          </h4>
+      
+          <h6 class="office-time mb-0 mb-4">owner@example.com</h6>
+          <a
+            href="#"
+            data-url="https://demo.rajodiya.com/leadgo-saas/company-info/2"
+            data-size="lg"
+            data-ajax-popup="true"
+            class="btn btn-outline-primary"
+            data-title="Company Info"
+            >Admin Hub</a
+          >
+      
+          <div class="col-12">
+            <!-- <hr class="my-3"  style="background: #000;"/> -->
+            <mat-divider class="my-3"></mat-divider>
+          </div>
+      
+          <div class="col-12 text-center pb-2">
+            <span class="text-dark text-xs">Plan Expired : Jan 8, 2024</span>
+          </div>
+          <div class="row g-2">
+            <div class="col-6 col-sm-4">
+              <div class="d-grid">
+                <span class="d-block font-weight-bold mb-0 text-dark">8</span>
+                <span class="d-block text-muted">Users</span>
               </div>
-              <div class="col-lg col-sm-6 col-12">
-                <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue1" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Sub Category">
-                    <mat-option *ngFor="let data of selectedList1" [value]="data.value">
-                    {{data.value}}
-                    </mat-option>
-                </mat-select>
-                </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="d-grid">
+                <span class="d-block font-weight-bold mb-0 text-dark">11</span>
+                <span class="d-block text-muted">Clients</span>
               </div>
-              <div class="col-lg col-sm-6 col-12">
-                <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue3" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Product">
-                    <mat-option *ngFor="let data of selectedList3" [value]="data.value">
-                    {{data.value}}
-                    </mat-option>
-                </mat-select>
-                </div>
-              </div>
-              <div class="col-lg col-sm-6 col-12">
-                <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue4" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Brand">
-                    <mat-option *ngFor="let data of selectedList4" [value]="data.value">
-                    {{data.value}}
-                    </mat-option>
-                </mat-select>
-                </div>
-              </div>
-              <div class="col-lg col-sm-6 col-12">
-                <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue5" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Price">
-                    <mat-option *ngFor="let data of selectedList5" [value]="data.value">
-                    {{data.value}}
-                    </mat-option>
-                </mat-select>
-                </div>
-              </div>
-              <div class="col-lg-1 col-sm-6 col-12">
-                <div class="form-group">
-                  <a class="btn btn-filters ms-auto"
-                    ><img src="assets/img/icons/search-whites.svg" alt="img"
-                  /></a>
-                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <div class="d-grid">
+                <span class="d-block font-weight-bold mb-0 text-dark">7</span>
+                <span class="d-block text-muted">Deals</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- /Filter -->
-    <div class="table-responsive">
-      <table
-        (matSortChange)="sortData($event)"
-        matSort
-        matSortActive="Sno"
-        matSortDirection="asc"
-        matSortDisableClear
-        class="table"
-        id="printTable"
-      >
-        <thead>
-          <tr>
-            <th>
-              <label class="checkboxs" (click)="selectAll(initChecked)">
-                <input type="checkbox" [(ngModel)]="initChecked" />
-                <span class="checkmarks"></span>
-              </label>
-            </th>
-            <th mat-sort-header="ProductName">Product Name</th>
-            <th mat-sort-header="SKU">SKU</th>
-            <th mat-sort-header="Category">Category</th>
-            <th mat-sort-header="Brand">Brand</th>
-            <th mat-sort-header="price">price</th>
-            <th mat-sort-header="Unit">Unit</th>
-            <th mat-sort-header="Qty">Qty</th>
-            <th mat-sort-header="CreatedBy">Created By</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let products of tableData; let i = index">
-            <td>
-              <label class="checkboxs">
-                <input type="checkbox" [(ngModel)]="products.isSelected" />
-                <span class="checkmarks"></span>
-              </label>
-            </td>
-            <td class="productimgname">
-              <a href="javascript:void(0);" class="product-img">
-                <img [src]="products.img" alt="product" />
-              </a>
-              <a href="javascript:void(0);">{{ products.ProductName }}</a>
-            </td>
-            <td>{{ products.SKU }}</td>
-            <td>{{ products.Category }}</td>
-            <td>{{ products.Brand }}</td>
-            <td>{{ products.price }}</td>
-            <td>{{ products.Unit }}</td>
-            <td>{{ products.Qty }}</td>
-            <td>{{ products.CreatedBy }}</td>
-            <td>
-              <a class="me-3" [routerLink]="routes.productDetails">
-                <img src="assets/img/icons/eye.svg" alt="img" />
-              </a>
-              <a class="me-3" [routerLink]="routes.editProduct">
-                <img src="assets/img/icons/edit.svg" alt="img" />
-              </a>
+      
 
-              <a
-                (click)="deleteBtn()"
-                class="confirm-text"
-                href="javascript:void(0);"
-              >
-                <img src="assets/img/icons/delete.svg" alt="img" />
-              </a>
-            </td>
-          </tr>
-          <tr *ngIf="tableData.length === 0">
-            <td colspan="12">
-              <h5 class="no-record">No matching records found</h5>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <app-custom-pagination></app-custom-pagination>
     </div>
   </div>
 </div>
-<!-- /product list -->

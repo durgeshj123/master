@@ -68,7 +68,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Plan',
-          route: routes.addProduct,
+          route: routes.transferList,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'plus-square',
@@ -118,7 +118,9 @@ export class SidebarService {
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'minimize-2',
-          subMenus: [],
+          subMenus: [
+            
+          ],
         },
         {
           menuValue: 'Settings',

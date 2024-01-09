@@ -38,7 +38,7 @@ export class routes {
     return this.baseUrl;
   }
   public static get dashboard(): string {
-    return this.core + '/dashboard';
+    return this.core + '/';
   }
   public static get components(): string {
     return this.core + '/components';
@@ -112,10 +112,10 @@ export class routes {
   // core pages child routes
 
   public static get productList(): string {
-    return this.product + '/product-list';
+    return this.core + '/super-admin/company';
   }
   public static get addProduct(): string {
-    return this.product + '/add-product';
+    return this.core + '/super-admin/company/add';
   }
   public static get categoryList(): string {
     return this.product + '/category-list';

@@ -9,8 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
+
+
 @NgModule({
-  declarations: [AppComponent, LoaderComponent],
+  declarations: [AppComponent, LoaderComponent, 
+    
+  ],
   imports: [BrowserModule, AppRoutingModule, sharedModule, BrowserAnimationsModule],
   exports: [FeatherModule],
   bootstrap: [AppComponent],

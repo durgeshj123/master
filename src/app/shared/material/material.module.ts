@@ -18,45 +18,41 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatDialogModule} from '@angular/material/dialog';
 
+export const modi = [
+  MatButtonModule,
+    MatSlideToggleModule,
+    MatTableModule,
+    MatSortModule,
+    ClipboardModule,
+    DragDropModule,
+    ScrollingModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatChipsModule,
+    CdkStepperModule,
+    MatSelectModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatDividerModule,
+    MatDialogModule,
+ 
+]
 @NgModule({
   imports: [
-    MatButtonModule,
-    MatSlideToggleModule,
-    MatTableModule,
-    MatSortModule,
-    ClipboardModule,
-    DragDropModule,
-    ScrollingModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatProgressBarModule,
-    MatChipsModule,
-    CdkStepperModule,
-    MatSelectModule
+    modi
   ],
   exports: [
-    MatButtonModule,
-    MatSlideToggleModule,
-    MatTableModule,
-    MatSortModule,
-    ClipboardModule,
-    DragDropModule,
-    ScrollingModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatProgressBarModule,
-    MatChipsModule,
-    CdkStepperModule,
-    MatSelectModule
+    modi
   ],
   providers: [
     {

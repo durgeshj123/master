@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup ,Validators } from '@angular/forms';
+import { FormGroup, FormBuilder ,Validators} from '@angular/forms';
 
 import { routes } from 'src/app/core/helpers/routes';
 
 @Component({
-  selector: 'app-addproduct',
-  templateUrl: './addproduct.component.html',
-  styleUrls: ['./addproduct.component.scss']
+  selector: 'app-add-company',
+  templateUrl: './add-company.component.html',
+  styleUrls: ['./add-company.component.scss']
 })
-export class AddproductComponent implements OnInit {
+export class AddCompanyComponent implements OnInit {
   public routes = routes;
   addUserForm !: FormGroup;
   ckForm = false;
@@ -33,6 +33,4 @@ onSubmit(): void{
 
 }
    
-
- 
 }

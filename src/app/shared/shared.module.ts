@@ -8,7 +8,7 @@ import { DataService } from '../core/core.index';
 import { SpinnerInterceptor } from '../core/interceptor/spinner/spinner.interceptor';
 import { MaterialModule } from './material/material.module';
 import { FeatherIconModule } from './feather/feather.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CustomPaginationModule } from './custom-pagination/custom-pagination.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
@@ -30,46 +30,37 @@ import { DatepickerModule } from 'ng2-datepicker';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
+
+export const md = [
+  PerfectScrollbarModule,
+  FeatherIconModule,
+  MaterialModule,
+  HttpClientModule,
+  NgApexchartsModule,
+  CountToModule,
+  ReactiveFormsModule,
+
+  CarouselModule,
+  CustomPaginationModule,
+  PerfectScrollbarModule,
+  DragDropModule,
+  AngularEditorModule,
+  NgxMaskModule.forRoot({
+    showMaskTyped: false,
+  }),
+  NgChartsModule.forRoot(),
+  FullCalendarModule,
+  DatepickerModule,
+  NgxbootstrapModule
+]
+
+
 @NgModule({
   imports: [
-    PerfectScrollbarModule,
-    FeatherIconModule,
-    MaterialModule,
-    HttpClientModule,
-    NgApexchartsModule,
-    CountToModule,
-    FormsModule,
-    CarouselModule,
-    CustomPaginationModule,
-    PerfectScrollbarModule,
-    DragDropModule,
-    AngularEditorModule,
-    NgxMaskModule.forRoot({
-      showMaskTyped: false,
-    }),
-    NgChartsModule.forRoot(),
-    FullCalendarModule,
-    DatepickerModule,
-    NgxbootstrapModule
+    md
   ],
   exports: [
-    FeatherModule,
-    PerfectScrollbarModule,
-    MaterialModule,
-    HttpClientModule,
-    FeatherIconModule,
-    CountToModule,
-    NgApexchartsModule,
-    FormsModule,
-    CarouselModule,
-    CustomPaginationModule,
-    PerfectScrollbarModule,
-    DragDropModule,
-    AngularEditorModule,
-    NgChartsModule,
-    FullCalendarModule,
-    DatepickerModule,
-    NgxbootstrapModule
+   md
   ],
   providers: [
     DataService,
