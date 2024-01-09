@@ -6,13 +6,14 @@ import { FeatherModule } from 'angular-feather';
 import { LoaderComponent } from './common-component/loader/loader.component';
 import { sharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollDirective } from './component/directives/scroll.directive';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoaderComponent, 
+  declarations: [AppComponent, LoaderComponent, ScrollDirective, 
     
   ],
   imports: [BrowserModule, AppRoutingModule, sharedModule, BrowserAnimationsModule],
