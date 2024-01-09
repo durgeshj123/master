@@ -24,6 +24,12 @@ import { PricingPlanComponent } from './component/pages/pricing-plan/pricing-pla
 import { FaqComponent } from './component/pages/faq/faq.component';
 import { TestimonialsComponent } from './component/pages/testimonials/testimonials.component';
 import { JoinUsComponent } from './component/pages/join-us/join-us.component';
+import { PlanComponent } from './component/pages/plan/plan.component';
+import { AddPlanComponent } from './component/shared/add-plan/add-plan.component';
+import { PlanRequestComponent } from './component/pages/plan-request/plan-request.component';
+import { CouponsComponent } from './component/pages/coupons/coupons.component';
+import { AddCouponsComponent } from './component/shared/add-coupons/add-coupons.component';
+import { OrderComponent } from './component/pages/order/order.component';
 
 
 
@@ -49,6 +55,12 @@ import { JoinUsComponent } from './component/pages/join-us/join-us.component';
     FaqComponent,
     TestimonialsComponent,
     JoinUsComponent,
+    PlanComponent,
+    AddPlanComponent,
+    PlanRequestComponent,
+    CouponsComponent,
+    AddCouponsComponent,
+    OrderComponent,
     
   ],
   imports: [

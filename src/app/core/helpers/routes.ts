@@ -117,19 +117,30 @@ export class routes {
   public static get addProduct(): string {
     return this.core + '/super-admin/company/add';
   }
-  
-  public static get categoryList(): string {
-    return this.product + '/category-list';
+  public static get transferList(): string {
+    return this.core + '/super-admin/plan';
   }
-  public static get addCategory(): string {
-    return this.product + '/add-category';
+  public static get addTransfer(): string {
+    return this.core +'/super-admin/plan/add';
   }
   public static get subCategoryList(): string {
-    return this.product + '/sub-category-list';
+    return this.core + '/super-admin/coupons';
   }
   public static get addSubcategory(): string {
-    return this.product + '/sub-add-category';
+    return this.core + '/super-admin/coupons/add';
   }
+
+  public static get brandList(): string {
+    return this.core + '/super-admin/planrequest';
+  }
+  
+  public static get categoryList(): string {
+    return this.core + '/super-admin/orders';
+  }
+  public static get addCategory(): string {
+    return this.core + '/super-admin/orders/add';
+  }
+  
   public static get addBrand(): string {
     return this.product + '/add-brand';
   }
@@ -154,9 +165,7 @@ export class routes {
   public static get productDetails(): string {
     return this.product + '/product-details';
   }
-  public static get brandList(): string {
-    return this.product + '/brand-list';
-  }
+ 
   public static get salesList(): string {
     return this.sales + '/sales-list';
   }
@@ -217,12 +226,7 @@ export class routes {
     return this.quotation + '/edit-quotation';
   }
 
-  public static get transferList(): string {
-    return this.transfer + '/transfer-list';
-  }
-  public static get addTransfer(): string {
-    return this.transfer + '/add-transfer';
-  }
+
   public static get importTransfer(): string {
     return this.transfer + '/import-transfer';
   }

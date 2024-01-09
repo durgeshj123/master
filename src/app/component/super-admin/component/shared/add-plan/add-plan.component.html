@@ -1,0 +1,102 @@
+
+<div class="page-header">
+    <div class="page-title">
+        <h4>Plan Add</h4>
+        <h6> Create Plan</h6>
+    </div>
+</div>
+<!-- /add -->
+<div class="card">
+    <form [formGroup]="addPlan">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Plan Name</label>
+                    <input type="text" formControlName="planname"  [ngClass]="{'is-invalid': addPlan.controls['planname'].errors && ckDep }" placeholder="Plan Name">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['planname'].errors && ckDep">  Enter Your Plan Name
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Trial Days</label>
+                    <input type="text" formControlName="trialdays" (keypress)="numberOnly($event)"  [ngClass]="{'is-invalid': addPlan.controls['trialdays'].errors && ckDep }" placeholder="Trial Days">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['trialdays'].errors && ckDep">Enter Your Trial Days
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Monthly Price</label>
+                    <input type="text" formControlName="monthlyprice" (keypress)="numberOnly($event)" [ngClass]="{'is-invalid': addPlan.controls['monthlyprice'].errors && ckDep }" placeholder="Monthly Price">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['monthlyprice'].errors && ckDep">Enter Your Monthly Price
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Annual Price </label>
+                    <input type="text" formControlName="annualprice" (keypress)="numberOnly($event)" [ngClass]="{'is-invalid': addPlan.controls['annualprice'].errors && ckDep }" placeholder="Annual Price">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['annualprice'].errors && ckDep">Enter Your Annual Price
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Maximum Users</label>
+                    <input type="text" formControlName="maximumusers" (keypress)="numberOnly($event)"  [ngClass]="{'is-invalid': addPlan.controls['maximumusers'].errors && ckDep }" placeholder="Maximum Users">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['maximumusers'].errors && ckDep">Enter Your Maximum Users
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Maximum Deals</label>
+                    <input type="text" formControlName="maximumdeals" (keypress)="numberOnly($event)"  [ngClass]="{'is-invalid': addPlan.controls['maximumdeals'].errors && ckDep }" placeholder="Maximum Deals">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['maximumdeals'].errors && ckDep">Enter Your Maximum Deals
+                  </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="form-group">
+                    <label>Storage Limit</label>
+                    <input type="text" formControlName="storagelimit"   [ngClass]="{'is-invalid': addPlan.controls['storagelimit'].errors && ckDep }" placeholder="Storage Limit">
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['storagelimit'].errors && ckDep">Enter Your Storage Limit
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-12">
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea type="text" formControlName="description"  [ngClass]="{'is-invalid': addPlan.controls['description'].errors && ckDep }" placeholder="Description">
+                    </textarea>
+                    <p class="text-danger"
+                    *ngIf="addPlan.controls['description'].errors && ckDep">Enter Your Description
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+        <div class="col">
+            <button  class="btn btn-submit me-2" (click)="addPlans()">Submit</button>
+            <a  class="btn btn-cancel">Cancel</a>
+        </div>
+</div>
+
+
+
+
+
+
+
