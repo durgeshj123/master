@@ -55,7 +55,8 @@ import { JoinUsComponent } from './component/pages/join-us/join-us.component';
     CommonModule,
     SuperAdminRoutingModule,
     sharedModule,
-    MaterialModule
+    MaterialModule,
+    
   ]
 })
 export class SuperAdminModule { }

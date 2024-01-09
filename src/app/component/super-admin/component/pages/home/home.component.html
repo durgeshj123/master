@@ -1,1 +1,323 @@
-<p>home works!</p>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-10">
+                <h5>Home Section</h5>
+            </div>
+        </div>
+    </div>
+
+    <form method="POST" action="https://demo.rajodiya.com/leadgo-saas/homesection" accept-charset="UTF-8"
+        enctype="multipart/form-data" id="imageUploadForm"><input name="_token" type="hidden"
+            value="eKSwJ4woJTP9AhABWCJQl309KCnCMPZEwYlfg0Wg">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Offer Text" class="form-label">Offer Text</label>
+                        <input class="form-control" placeholder="70% Special Offer" name="home_offer_text" type="text"
+                            value="70% Special Offer">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Title" class="form-label">Title</label>
+                        <input class="form-control " placeholder="Enter Title" name="home_title" type="text"
+                            value="Home">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Heading" class="form-label">Heading</label>
+                        <input class="form-control " placeholder="Enter Heading" name="home_heading" type="text"
+                            value="LeadGo SaaS Lead Management Tool">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Trusted by" class="form-label">Trusted by</label>
+                        <input class="form-control" placeholder="1,000+ customers" name="home_trusted_by" type="text"
+                            value="1000+ Customer">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="Description" class="form-label">Description</label>
+                        <input class="form-control" placeholder="Enter Description" name="home_description" type="text"
+                            value="Use these awesome forms to login or create new account in your project for free.">
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Live Demo Link" class="form-label">Live Demo Link</label>
+                        <input class="form-control" placeholder="Enter Link" name="home_live_demo_link" type="text"
+                            value="https://demo.rajodiya.com/leadgo-saas/login">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Buy Now Link" class="form-label">Buy Now Link</label>
+                        <input class="form-control" placeholder="Enter Link" name="home_buy_now_link" type="text"
+                            value="https://codecanyon.net/item/leadgo-saas-lead-management-tool/25246716">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Banner" class="form-label">Banner</label>
+                        <div class="logo-content mt-4">
+                            <img id="image"
+                                src="https://demo.rajodiya.com/leadgo-saas/storage/uploads/landing_page_image/home_banner.png"
+                                class="big-logo" width="150px">
+                        </div>
+                        <div class="choose-files mt-5">
+                            <label for="home_banner">
+                                <div class=" bg-primary company_logo_update" style="cursor: pointer;">
+                                    <i class="ti ti-upload px-1"></i>Choose file here
+                                </div>
+                                <input type="file" name="home_banner" id="home_banner" class="form-control file"
+                                    data-filename="home_banner">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="Logo" class="form-label">Logo</label>
+
+
+                        <div class="text-end">
+                            <button class="btn btn-sm btn-primary btn-icon m-1 " data-repeater-create=""
+                                type="button"><i class="ti ti-plus"></i></button>
+                        </div>
+                        <div data-repeater-list="home_logo">
+                            <div data-repeater-item="" class="text-end">
+                                <div class="card mb-3 border shadow-none product_Image">
+                                    <div class="px-2 py-2">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <input type="file" class="form-control" name="home_logo[0][home_logo]"
+                                                    accept="image/*" onchange="updateImagePreview(this)">
+                                            </div>
+                                            <div class="col-auto">
+                                                <p class="card-text small text-muted">
+
+                                                    <img src="http://localhost:4200/assets/img/logo.png"
+                                                        width="70px" alt="Image placeholder" data-dz-thumbnail="">
+
+                                                </p>
+                                            </div>
+                                            <div class="col-auto actions">
+                                                <a data-repeater-delete="" href="javascript:void(0)"
+                                                    class="action-item btn btn-sm btn-icon btn-light-secondary repeater-action-btn ms-2">
+                                                    <i class="ti ti-trash"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="imageContainer">
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="f3bb7a6dacf79830b89a73fe550853a5_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="f4a31b12df91c82ebb5a9e9f5935a917_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="b0953b5c10e2a2027f3b0d1b6e3e430e_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="40babd3fc4c9ec1b0c898e14c3e82ba8_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="84cefca48bb33215d973e00f91fc39d3_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 border shadow-none product_Image">
+                            <div class="px-2 py-2">
+                                <div class="row align-items-center">
+                                    <div class="col ml-n2">
+                                        <p class="card-text small text-muted">
+
+                                            <img src="http://localhost:4200/assets/img/logo.png"
+                                                width="70px" alt="Image placeholder" data-dz-thumbnail="">
+                                        </p>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary"
+                                            href="http://localhost:4200/assets/img/logo.png"
+                                            download="" data-toggle="tooltip" data-original-title="Download">
+                                            <i class="ti ti-download"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <a class="action-item btn btn-sm btn-icon btn-light-secondary delete-button"
+                                            data-image="70a769b52b41e81f25efbfd1ec612600_home_logo.png">
+                                            <i class="ti ti-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" class="form-control" id="imageNames" name="savedlogo"
+                        value="home_logo.png,f3bb7a6dacf79830b89a73fe550853a5_home_logo.png,f4a31b12df91c82ebb5a9e9f5935a917_home_logo.png,b0953b5c10e2a2027f3b0d1b6e3e430e_home_logo.png,40babd3fc4c9ec1b0c898e14c3e82ba8_home_logo.png,84cefca48bb33215d973e00f91fc39d3_home_logo.png,70a769b52b41e81f25efbfd1ec612600_home_logo.png">
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <input class="btn btn-print-invoice btn-primary m-r-10" type="submit" value="Save Changes">
+        </div>
+    </form>
+</div>
