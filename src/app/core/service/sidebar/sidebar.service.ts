@@ -115,11 +115,50 @@ export class SidebarService {
         {
           menuValue: 'Landing Page',
           route: routes.importProduct,
-          hasSubRoute: false,
-          showSubRoute: false,
+          hasSubRoute: true,
+          showSubRoute: true,
           icon: 'minimize-2',
           subMenus: [
-            
+            {
+              menuValue: 'Top Bar',
+              route: routes.chat,
+            },
+            {
+              menuValue: 'Custom Page',
+              route: routes.custompage,
+            },
+            {
+              menuValue: 'Home',
+              route: routes.home,
+            },
+            {
+              menuValue: 'Features',
+              route: routes.features,
+            },
+            {
+              menuValue: 'Discover',
+              route: routes.discover,
+            },
+            {
+              menuValue: 'Screenshot',
+              route: routes.screenshot,
+            },
+            {
+              menuValue: 'Pricing Plan',
+              route: routes.pricingplan,
+            },
+            {
+              menuValue: 'FAQ',
+              route: routes.faq,
+            },
+            {
+              menuValue: 'Testimonials',
+              route: routes.testimonials,
+            },
+            {
+              menuValue: 'Join User',
+              route: routes.joinus,
+            },
           ],
         },
         {

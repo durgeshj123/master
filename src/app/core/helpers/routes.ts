@@ -117,6 +117,7 @@ export class routes {
   public static get addProduct(): string {
     return this.core + '/super-admin/company/add';
   }
+  
   public static get categoryList(): string {
     return this.product + '/category-list';
   }
@@ -435,7 +436,34 @@ export class routes {
     return this.table + '/data-basic';
   }
   public static get chat(): string {
-    return this.application + '/chat';
+    return this.core + '/super-admin/topbar';
+  }
+  public static get custompage(): string {
+    return this.core + '/super-admin/custompage';
+  }
+  public static get home(): string {
+    return this.core + '/super-admin/homepage';
+  }
+  public static get features(): string {
+    return this.core + '/super-admin/features';
+  }
+  public static get discover(): string {
+    return this.core + '/super-admin/discover';
+  }
+  public static get screenshot(): string {
+    return this.core + '/super-admin/screenshot';
+  }
+  public static get pricingplan(): string {
+    return this.core + '/super-admin/priceing';
+  }
+  public static get faq(): string {
+    return this.core + '/super-admin/faq';
+  }
+  public static get testimonials(): string {
+    return this.core + '/super-admin/testimonials';
+  }
+  public static get joinus(): string {
+    return this.core + '/super-admin/joinus';
   }
   public static get calendar(): string {
     return this.application + '/calendar';

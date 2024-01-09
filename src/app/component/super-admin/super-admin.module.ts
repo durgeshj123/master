@@ -14,6 +14,17 @@ import { sharedModule } from 'src/app/shared/shared.module';
 import { CompanyComponent } from './component/pages/company/company.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { AddCompanyComponent } from './component/shared/add-company/add-company.component';
+import { TopbarComponent } from './component/pages/topbar/topbar.component';
+import { CustomPageComponent } from './component/pages/custom-page/custom-page.component';
+import { HomeComponent } from './component/pages/home/home.component';
+import { FeaturesComponent } from './component/pages/features/features.component';
+import { DiscoverComponent } from './component/pages/discover/discover.component';
+import { ScreenshotComponent } from './component/pages/screenshot/screenshot.component';
+import { PricingPlanComponent } from './component/pages/pricing-plan/pricing-plan.component';
+import { FaqComponent } from './component/pages/faq/faq.component';
+import { TestimonialsComponent } from './component/pages/testimonials/testimonials.component';
+import { JoinUsComponent } from './component/pages/join-us/join-us.component';
+
 
 
 @NgModule({
@@ -28,6 +39,17 @@ import { AddCompanyComponent } from './component/shared/add-company/add-company.
     LayoutComponent,
     CompanyComponent,
     AddCompanyComponent,
+    TopbarComponent,
+    CustomPageComponent,
+    HomeComponent,
+    FeaturesComponent,
+    DiscoverComponent,
+    ScreenshotComponent,
+    PricingPlanComponent,
+    FaqComponent,
+    TestimonialsComponent,
+    JoinUsComponent,
+    
   ],
   imports: [
     CommonModule,
