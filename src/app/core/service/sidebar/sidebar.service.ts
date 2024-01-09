@@ -116,7 +116,7 @@ export class SidebarService {
           menuValue: 'Landing Page',
           route: routes.importProduct,
           hasSubRoute: true,
-          showSubRoute: true,
+          showSubRoute: false,
           icon: 'minimize-2',
           subMenus: [
             {

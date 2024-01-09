@@ -59,6 +59,10 @@ export class HeaderComponent implements OnInit{
     Feather.replace();
   }
 
+  logouts(){
+    this.Router.navigate(["/signin"])
+  }
+  
   public logout(): void {
     this.webStorage.Logout();
   }

@@ -1,0 +1,61 @@
+.example-card {
+    max-width: 100px;
+  }
+  .price-card .price-badge {
+    color: #fff;
+    padding: 7px 24px;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bg-primary {
+    background: linear-gradient(141.55deg, #FF9F43 3.46%, #FF9F43 99.86%), #FF9F43 !important;
+    border-radius: 30px;
+}
+price-card .list-unstyled .theme-avtar {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #fff;
+    margin-right: 15px;
+}
+.f-w-600 {
+    font-weight: 600;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.price-card .list-unstyled {
+    display: inline-block;
+}
+.my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.text-sm {
+    font-size: 0.75rem !important;
+}
+h1, .h1 {
+    font-size: 2.25rem;
+}
+.price-card .list-unstyled li + li {
+    margin-top: 8px;
+}
+.cnt{
+  text-align: center;
+}
+.price-card .list-unstyled .theme-avtar {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #fff;
+    margin-right:33px;
+}
