@@ -60,7 +60,8 @@ export class HeaderComponent implements OnInit{
   }
 
   logouts(){
-    this.Router.navigate(["/signin"])
+    sessionStorage.removeItem('token')
+    this.Router.navigate(["/sign-in/signin"])
   }
   
   public logout(): void {

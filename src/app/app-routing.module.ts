@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './auth/guard/login.guard';
 
 const routes: Routes = [
-{ path : "", redirectTo : 'super-admin', pathMatch : 'full'},
+{ path : "", redirectTo : 'sign-in', pathMatch : 'full'},
   {
     path: 'super-admin',
     loadChildren: () =>
       import('./component/super-admin/super-admin.module').then(
         (s) => s.SuperAdminModule
       ),
+    canActivate: [LoginGuard]
+
   },
   {
     path : 'admin',
-    loadChildren : ()=> import('./component/admin/admin.module').then((a)=>a.AdminModule)
+    loadChildren : ()=> import('./component/admin/admin.module').then((a)=>a.AdminModule),
+    canActivate: [LoginGuard]
+
   },
+  
   {
     path : 'user',
     loadChildren : ()=> import('./component/user/user.module').then((u)=>u.UserModule)
@@ -24,10 +30,10 @@ const routes: Routes = [
   },
 
 
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-  // },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
   {
     path: 'errorpages',
     loadChildren: () =>

@@ -1,35 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { routes } from 'src/app/core/helpers/routes';
-import { WebstorgeService } from 'src/app/shared/webstorge.service';
+import { ServiceService } from '../authservice/service.service';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit{
+export class SigninComponent implements OnInit {
   public routes = routes;
   password = '';
   show = false;
   form = new FormGroup({
-    email: new FormControl('user@dreamguystech.com', [Validators.required]),
-    password: new FormControl('12345', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
   get f() {
     return this.form.controls;
   }
-  constructor(private storage: WebstorgeService) {}
+  constructor( private route: Router,private authservice:ServiceService) { }
   ngOnInit() {
-    if (localStorage.getItem('authenticated')) {
-      localStorage.removeItem('authenticated');
-    }
+ 
   }
   submit() {
-    if (this.form.valid) {
-      this.storage.login();
+    if (this.form.invalid) {
+      return
     } else {
-      this.form.markAllAsTouched();
+      this.authservice.login(this.form.value).subscribe((res) => {
+        var resp:any=res
+        sessionStorage.setItem("token",resp.token)
+        this.route.navigate(["/super-admin/dashboard"])
+
+      })
     }
   }
   onClick() {
